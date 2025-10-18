@@ -52,12 +52,13 @@ function App() {
         
         body {
           font-family: 'Inter', sans-serif;
-          padding: 30px;
-          font-size: 14px;
-          line-height: 1.6;
+          padding: 15px;
+          font-size: 12px;
+          line-height: 1.3;
           color: #333;
           background: white;
           position: relative;
+          margin: 0;
         }
         
         .invoice-container {
@@ -72,9 +73,9 @@ function App() {
         
             .invoice-header {
               background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 100%);
-              padding: 30px;
+              padding: 15px;
               text-align: center;
-              border-bottom: 3px solid #b8860b;
+              border-bottom: 2px solid #b8860b;
               position: relative;
               overflow: hidden;
             }
@@ -138,21 +139,21 @@ function App() {
         
         .shop-name {
           font-family: 'Playfair Display', serif;
-          font-size: 32px;
+          font-size: 24px;
           font-weight: 700;
           color: #8b4513;
-          margin-bottom: 8px;
-          text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+          margin-bottom: 4px;
+          text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         
         .shop-name-tamil {
-          font-size: 24px;
+          font-size: 18px;
           color: #8b4513;
-          margin-bottom: 15px;
+          margin-bottom: 8px;
         }
         
         .shop-details {
-          font-size: 16px;
+          font-size: 12px;
           color: #5d4e37;
           font-weight: 500;
         }
@@ -540,14 +541,51 @@ function App() {
             @media print {
               @page { 
                 size: A4; 
-                margin: 15mm;
+                margin: 8mm;
               }
               body {
                 padding: 0;
+                font-size: 11px;
+                line-height: 1.2;
               }
               .invoice-container {
                 border: none;
                 box-shadow: none;
+                max-height: 100vh;
+                overflow: hidden;
+              }
+              .invoice-header {
+                padding: 8px;
+              }
+              .invoice-body {
+                padding: 8px;
+              }
+              .customer-section {
+                padding: 6px;
+                margin-bottom: 8px;
+              }
+              .items-table {
+                margin: 8px 0;
+              }
+              .items-table th,
+              .items-table td {
+                padding: 4px 2px;
+                font-size: 9px;
+              }
+              .total-section {
+                margin: 8px 0;
+                padding: 6px;
+              }
+              .notes-section {
+                margin: 8px 0;
+                padding: 6px;
+              }
+              .signature-section {
+                margin-top: 10px;
+              }
+              .signature-box {
+                height: 40px;
+                margin: 8px 0;
               }
               .watermark {
                 display: block;
