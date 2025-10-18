@@ -273,24 +273,49 @@ function App() {
           margin-bottom: 8px;
         }
         
-        .signature-section {
-          margin-top: 40px;
-          text-align: center;
-        }
-        
-        .signature-box {
-          border: 2px dashed #d4af37;
-          height: 80px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 16px;
-          font-weight: 600;
-          color: #8b4513;
-          background: #faf9f7;
-          border-radius: 8px;
-          margin: 20px 0;
-        }
+            .signature-section {
+              margin-top: 30px;
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+              gap: 20px;
+            }
+            
+            .signature-left {
+              flex: 1;
+              text-align: left;
+            }
+            
+            .signature-center {
+              flex: 1;
+              text-align: center;
+            }
+            
+            .signature-right {
+              flex: 1;
+              text-align: right;
+            }
+            
+            .signature-box {
+              border: 2px dashed #d4af37;
+              height: 60px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 14px;
+              font-weight: 600;
+              color: #8b4513;
+              background: #faf9f7;
+              border-radius: 6px;
+              margin: 10px 0;
+            }
+            
+            .signature-info {
+              font-size: 12px;
+              color: #8b4513;
+              margin-bottom: 5px;
+              font-weight: 500;
+            }
         
         .watermark {
           position: fixed;
@@ -487,22 +512,47 @@ function App() {
         }
         
         .signature-section {
-          margin-top: 40px;
+          margin-top: 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          gap: 20px;
+        }
+        
+        .signature-left {
+          flex: 1;
+          text-align: left;
+        }
+        
+        .signature-center {
+          flex: 1;
           text-align: center;
+        }
+        
+        .signature-right {
+          flex: 1;
+          text-align: right;
         }
         
         .signature-box {
           border: 2px dashed #2563eb;
-          height: 80px;
+          height: 60px;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 500;
           color: #1e40af;
           background: #f8fafc;
-          border-radius: 8px;
-          margin: 20px 0;
+          border-radius: 6px;
+          margin: 10px 0;
+        }
+        
+        .signature-info {
+          font-size: 12px;
+          color: #1e40af;
+          margin-bottom: 5px;
+          font-weight: 500;
         }
         
         .watermark {
@@ -621,7 +671,7 @@ function App() {
                   <div class="shop-name-tamil">ஜேஸ்மின் கோல்ட் ஹவுஸ்</div>
                   <div class="shop-name">JASMIN GOLD HOUSE</div>
                   <div class="shop-details">
-                    11, Main Street, Kalmunail 11, பிராதான வீதி, கல்முனை<br>
+                    11, Main Street, Kalmunai, பிராதான வீதி, கல்முனை<br>
                     Tel: 077 7679500, 067 2223963
                   </div>
                 </div>
@@ -691,7 +741,19 @@ function App() {
               </div>
               
               <div class="signature-section">
-                <div class="signature-box">Authorized Signature / Stamp</div>
+                <div class="signature-left">
+                  <div class="signature-info">Jasmin Gold House</div>
+                  <div class="signature-info">11, Main Street, Kalmunai</div>
+                  <div class="signature-info">Tel: 077 7679500</div>
+                </div>
+                <div class="signature-center">
+                  <div class="signature-box">Authorized Signature / Stamp</div>
+                </div>
+                <div class="signature-right">
+                  <div class="signature-info">Date: ${form.date || '________________'}</div>
+                  <div class="signature-info">Invoice No: _______________</div>
+                  <div class="signature-info">Thank You!</div>
+                </div>
               </div>
             </div>
             
